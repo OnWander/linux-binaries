@@ -1,0 +1,17 @@
+#!/bin/sh
+
+##############################################################
+# https://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide #
+##############################################################
+
+# cd ~/ffmpeg_sources
+# wget http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz
+# tar xzvf yasm-1.2.0.tar.gz
+# cd yasm-1.2.0
+# ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin"
+# make
+# make install
+# make distclean
+# . ~/.profile
+
+vulcan build -s ~/ffmpeg_sources -p "$HOME/ffmpeg_build" -c "./configure --prefix=\"$HOME/ffmpeg_build\" --bindir=\"$HOME/bin\" && make && make install && make distclean"
